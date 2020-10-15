@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "background": "#111111",
+  "config": {
+    "style": {"cell": {"stroke": "transparent"}},
+    "legend": {"labelColor": "aliceblue"},
+    "titleColor": "aliceblue"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/nateruze/FIT3179/main/active_terrorists.csv"
+  },
+  "width": 600,
+  "height": 300,
+  "transform": [],
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 0.75
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "nominal",
+      "axis": {"grid": false, "titleColor": "aliceblue"}
+    },
+    "y": {
+      "field": "Group",
+      "type": "nominal",
+      "axis": {"title": "", "labelColor": "aliceblue"}
+    },
+    "size": {
+      "field": "Total Attacks",
+      "type": "quantitative",
+      "title": "Annual Global Deaths",
+      "legend": {"clipHeight": 0},
+      "scale": {"rangeMax": 4000}
+    },
+    "color": {"field": "Group", "type": "nominal", "legend": null}
+  }
+}
