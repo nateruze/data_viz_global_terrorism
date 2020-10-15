@@ -474,7 +474,7 @@ ul li ul li {
 #watch, #red-boots, #brown-boots {
     padding: 20px;
     max-height: 900px;
-    background: -webkit-linear-gradient(90deg, #c8c8cc, #4f5253 30%);
+    background-color: #111111;
 }
 
 #watch h4 {
