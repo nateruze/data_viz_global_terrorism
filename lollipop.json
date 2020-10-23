@@ -98,7 +98,15 @@
           "title": "Time Period"
         },
         "size": {"value": 100},
-        "opacity": {"value": 1}
+        "opacity": {"value": 1},
+          "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {
+        "field": "Total_Attacks",
+        "type": "quantitative",
+        "title": "Total Attacks"
+      }
+    ]
       }
     }
   ]
