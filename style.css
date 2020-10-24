@@ -341,7 +341,7 @@ ul li ul li {
     font-size: 4.5rem;
     line-height: 4.5rem;
     letter-spacing: 0.8rem;
-    background: -webkit-linear-gradient(#cbcccf, #151517);
+    background: -webkit-linear-gradient(#f5f3f4, #151517);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     text-align: center;
@@ -364,7 +364,7 @@ ul li ul li {
     padding: 40px;
     padding-top: 2px;
     text-align: center;
-    color: #c7c8c9;
+    color: #f5f3f4;
 }
 
 
