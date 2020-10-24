@@ -3,7 +3,7 @@
   "background": "#111111",
   "config": {
     "style": {"cell": {"stroke": "transparent"}},
-    "legend": {"labelColor": "aliceblue", "titleColor":"aliceblue"},
+    "legend": {"labelColor": "aliceblue", "titleColor":"#f5f3f4"},
     "axis": {"labelColor":"aliceblue"}
   },
   "width": 600,
