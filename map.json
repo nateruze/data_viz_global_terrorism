@@ -3,8 +3,8 @@
   "background": "#111111",
   "config": {
     "style": {"cell": {"stroke": "transparent"}},
-    "legend": {"labelColor": "aliceblue"},
-    "titleColor":"aliceblue"
+    "legend": {"labelColor": "aliceblue", "titleColor":"aliceblue"},
+    "axis": {"labelColor":"aliceblue"}
   },
   "width": 600,
   "height": 500,
@@ -37,7 +37,7 @@
       {
         "field": "Score",
         "type": "quantitative",
-        "title": "Global Terrorism index"
+        "title": "Global Terrorism Index"
       }
     ]
   }
