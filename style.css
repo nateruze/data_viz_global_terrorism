@@ -301,7 +301,7 @@ ul li ul li {
     background-color: #111111;
     padding: 20px;
     padding-right: 2px;
-    max-height: 400px;
+    max-height: 530px;
     /*background: -webkit-linear-gradient(90deg, #4f5253, #c8c8cc 30%);*/
 }
 
@@ -362,7 +362,7 @@ ul li ul li {
 
 #watch, #red-boots, #brown-boots {
     padding-top: 5px;
-    max-height: 400px;
+    max-height: 530px;
     background-color: #111111;
 }
 
