@@ -55,14 +55,14 @@
     "y": {
       "field": "Wounded",
       "type": "quantitative",
-      "axis": {"tickCount": 10},
+      "axis": {"tickCount": 7},
       "scale": {"type": "log", "domain": [1, 100000]}
     },
     "x": {
       "field": "Deaths",
       "type": "quantitative",
       "scale": {"type": "log", "domain": [1, 100000]},
-      "axis": {"tickCount": 10}
+      "axis": {"tickCount": 7}
     },
     "size": {
       "field": "Total Attacks",
@@ -87,22 +87,28 @@
           "Taliban"
         ],
         "range": [
-          "#7400b8",
-          "#6930c3",
-          "#5e60ce",
+          "#6a040f",
+          "#dc2f02",
+          "#f48c06",
           "#5390d9",
-          "#4ea8de",
-          "#48bfe3",
-          "#56cfe1",
-          "#64dfdf",
-          "#72efdd",
-          "#80ffdb"
+          "#708d81",
+          "#335c67",
+          "#fff3b0",
+          "#e85d04",
+          "#ff9b54",
+          "#ffba08"
         ]
       }
     },
     "opacity": {
       "condition": {"selection": "group_highlight", "value": 0.7},
       "value": 0.1
-    }
+    },
+    "tooltip": [
+{"field": "Group", "type": "nominal", "title": "Terrorist Group"},
+{"field": "Wounded", "type": "quantitative", "format": ","}, {"field": "Deaths", "type": "quantitative", "format": ","}, {"field": "Total Attacks", "type": "quantitative", "format": ","}, {
+"field": "Year", "type": "quantitative",
+"title": "Year"
+} ]
   }
 }
