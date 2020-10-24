@@ -463,7 +463,7 @@ ul li ul li {
 }
 
 #still-heart h4 {
-    color: #E5DADA;
+    color: #f5f3f4;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
@@ -471,18 +471,18 @@ ul li ul li {
 
 
 #still-heart p {
-    color: #E5DADA;
+    color: #f5f3f4;
 }
 
 
 #watch, #red-boots, #brown-boots {
-    padding: 20px;
+    padding-top: 5px;
     max-height: 900px;
     background-color: #111111;
 }
 
 #watch h4 {
-    color: #cbcbc9;
+    color: #f5f3f4;
     text-align: right;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
@@ -490,7 +490,7 @@ ul li ul li {
 }
 
 #watch p {
-    color: #b7b7b6;
+    color: #f5f3f4;
     text-align: right;
    
 }
