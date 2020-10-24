@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "background": "#111111",
+  "width": 500,
+  "height": 300,
+  "config": {
+    "style": {"cell": {"stroke": "transparent"}},
+    "legend": {"labelColor": "aliceblue", "titleColor": "aliceblue"},
+    "axis": {"grid": false, "labelColor": "aliceblue"}
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/nateruze/FIT3179/main/active_terrorists.csv"
+  },
+  "transform": [
+    {"filter": "datum.Wounded > 0"},
+    {"filter": "datum.Deaths > 0"},
+    {"filter": "Year_selection == null || datum.Year == Year_selection"}
+  ],
+  "params": [
+    {
+      "name": "Year_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017"
+        ],
+        "labels": [
+          "Show all",
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014",
+          "2015",
+          "2016",
+          "2017"
+        ],
+        "name": "Year"
+      }
+    }
+  ],
+  "selection": {
+    "group_highlight": {"type": "multi", "fields": ["Group"], "bind": "legend"}
+  },
+  "mark": "circle",
+  "encoding": {
+    "y": {
+      "field": "Wounded",
+      "type": "quantitative",
+      "axis": {"tickCount": 10},
+      "scale": {"type": "log", "domain": [1, 100000]}
+    },
+    "x": {
+      "field": "Deaths",
+      "type": "quantitative",
+      "scale": {"type": "log", "domain": [1, 100000]},
+      "axis": {"tickCount": 10}
+    },
+    "size": {
+      "field": "Total Attacks",
+      "type": "quantitative",
+      "scale": {"rangeMax": 1500, "rangeMin": 1},
+      "legend": {"format": ".1s"}
+    },
+    "color": {
+      "field": "Group",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Al-Shabaab",
+          "Boko Haram",
+          "CPI-Maoist",
+          "Houthi extremists",
+          "ISIL",
+          "Maoists",
+          "NPA",
+          "PKK",
+          "TTP",
+          "Taliban"
+        ],
+        "range": [
+          "#7400b8",
+          "#6930c3",
+          "#5e60ce",
+          "#5390d9",
+          "#4ea8de",
+          "#48bfe3",
+          "#56cfe1",
+          "#64dfdf",
+          "#72efdd",
+          "#80ffdb"
+        ]
+      }
+    },
+    "opacity": {
+      "condition": {"selection": "group_highlight", "value": 0.7},
+      "value": 0.1
+    }
+  }
+}
