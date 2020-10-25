@@ -7,8 +7,8 @@
     "legend": {"labelColor": "aliceblue", "titleColor": "aliceblue"},
     "axis": {"grid": false, "labelColor": "aliceblue"}
   },
-  "width": 450,
-  "height": 350,
+  "width": 600,
+  "height": 500,
   "data": {
     "values": [
        {"Weapon": "Explosives", "value": 92426},
@@ -27,9 +27,9 @@
     }
   },
   "layer": [{
-    "mark": {"type": "arc", "outerRadius": 130, "innerRadius": 40}
+    "mark": {"type": "arc", "outerRadius": 180, "innerRadius": 60}
   }, {
-    "mark": {"type": "text", "radius": 160},
+    "mark": {"type": "text", "radius": 210},
     "encoding": {
       "text": {"field": "Weapon", "type": "nominal"}
     }
