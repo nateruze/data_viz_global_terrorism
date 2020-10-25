@@ -1,0 +1,113 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/nateruze/FIT3179/main/fatal_bombings_history.csv"
+  },
+  "background": "#111111",
+  "config": {
+    "style": {"cell": {"stroke": "transparent"}},
+    "legend": {"labelColor": "aliceblue", "titleColor": "aliceblue"},
+    "axis": {"grid": false, "labelColor": "aliceblue"}
+  },
+  "width": 600,
+  "height": 500,
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": false,
+        "color": "#d00000",
+        "opacity": 0.3
+      },
+      "encoding": {
+        "x": {"field": "Year", "type": "nominal", "scale": {"zero": false}},
+        "y": {
+          "field": "Deaths",
+          "type": "quantitative",
+          "scale": {"zero": false}
+        },
+        "order": {"field": "Year"}
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 300, "color": "#ffba08"},
+      "encoding": {
+        "x": {"field": "Year", "type": "nominal", "scale": {"zero": false}},
+        "y": {
+          "field": "Deaths",
+          "type": "quantitative",
+          "scale": {"zero": false}
+        },
+        "order": {"field": "Year"},
+        "tooltip": [
+          {"field": "Place", "type": "nominal"},
+          {"field": "Deaths", "type": "quantitative", "format": ","},
+          {"field": "Year", "type": "nominal"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -2,
+        "dy": -250,
+        "fontSize": 8,
+        "color": "aliceblue"
+      },
+      "encoding": {
+        "text": {"field": "Place", "type": "nominal"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Place'] == '9/11, United States'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 200,
+        "dy": -100,
+        "fontSize": 8,
+        "color": "aliceblue"
+      },
+      "encoding": {
+        "text": {"field": "Place", "type": "nominal"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Place'] == 'Baga massacre, Nigeria'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 210,
+        "dy": -9,
+        "fontSize": 8,
+        "color": "aliceblue"
+      },
+      "encoding": {
+        "text": {"field": "Place", "type": "nominal"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Place'] == 'Camp Speicher massacre, Iraq'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ]
+}
