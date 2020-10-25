@@ -27,9 +27,9 @@
     }
   },
   "layer": [{
-    "mark": {"type": "arc", "outerRadius": 100, "innerRadius": 35}
+    "mark": {"type": "arc", "outerRadius": 130, "innerRadius": 40}
   }, {
-    "mark": {"type": "text", "radius": 130},
+    "mark": {"type": "text", "radius": 160},
     "encoding": {
       "text": {"field": "Weapon", "type": "nominal"}
     }
