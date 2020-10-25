@@ -1,63 +1,33 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "A basic radial plot that encodes two values as the angle and radius of an arc.",
-  "width": 200,
-  "height": 200,
-  "data": [
-    {
-      "name": "table",
-      "values": [92426, 58528, 11135, 15157, 4416],
-      "transform": [{"type": "pie", "field": "data"}]
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple donut chart with embedded data.",
+  "background": "#111111",
+   "config": {
+    "style": {"cell": {"stroke": "transparent"}},
+    "legend": {"labelColor": "aliceblue", "titleColor": "aliceblue"},
+    "axis": {"grid": false, "labelColor": "aliceblue"}
+  },
+  "width": 400,
+  "height": 300,
+  "data": {
+    "values": [
+      {"Weapon": "Explosives", "value": 92426},
+      {"Weapon": "Firearms", "value": 58524},
+      {"Weapon": "Incendiary", "value": 11135},
+      {"Weapon": "Unknown", "value": 15157},
+      {"Weapon": "Other", "value": 4416}
+      
+    ]
+  },
+  "mark": {"type": "arc", "innerRadius": 40},
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "Weapon", "type": "nominal",
+    "scale": {"range": ["#9d0208", "#faa307", "#d00000",  "#fff3b0", "#335c67"]}
     },
-    {"name": "names", "values": ["Explosives"]}
-  ],
-  "scales": [
-    {
-      "name": "r",
-      "type": "sqrt",
-      "domain": {"data": "table", "field": "data"},
-      "zero": true,
-      "range": [50, 170]
-    }
-  ],
-  "marks": [
-    {
-      "type": "arc",
-      "from": {"data": "table"},
-      "encode": {
-        "enter": {
-          "x": {"field": {"group": "width"}, "mult": 0.5},
-          "y": {"field": {"group": "height"}, "mult": 0.5},
-          "startAngle": {"field": "startAngle"},
-          "endAngle": {"field": "endAngle"},
-          "innerRadius": {"value": 20},
-          "outerRadius": {"scale": "r", "field": "data"},
-          "stroke": {"value": "#fff"}
-        },
-        "update": {"fill": {"value": "#E59500"}},
-        "hover": {"fill": {"value": "pink"}},
-        "color": {
-          "data": "table",
-          "field": "data",
-          "scale": {"range": ["#E5DADA", "#E59500", "#840032"]}
-        }
-      }
-    },
-    {
-      "type": "text",
-      "from": {"data": "names"},
-      "encode": {
-        "enter": {
-          "x": {"field": {"group": "height"}, "mult": 0.8},
-          "y": {"field": {"group": "height"}, "mult": 1},
-          "radius": {"scale": "r", "field": "data", "offset": 10},
-          "theta": {"signal": "(datum.startAngle + datum.endAngle)/2"},
-          "fill": {"value": "#000"},
-          "align": {"value": "center"},
-          "baseline": {"value": "middle"},
-          "text": {"field": "data"}
-        }
-      }
-    }
-  ]
+     "tooltip": [
+{"field": "Weapon", "type": "nominal", "title": "Weapon"},
+{"field": "value", "type": "quantitative", "format": ",", "title": "Number of Attacks"}]
+  },
+  "view": {"stroke": null}
 }
