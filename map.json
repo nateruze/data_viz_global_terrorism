@@ -8,6 +8,7 @@
   },
   "width": 600,
   "height": 500,
+  "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/nateruze/FIT3179/main/custom.geo-2.json",
     "format": {"type": "topojson", "feature": "custom"}
