@@ -6,9 +6,20 @@
     "legend": {"labelColor": "aliceblue", "titleColor":"#f5f3f4"},
     "axis": {"labelColor":"aliceblue"}
   },
-  "width": 600,
+  "width": 700,
   "height": 500,
   "projection": {"type": "equalEarth"},
+  "title": {
+    "text": "Impact of Terrorism Around the World",
+    "color":"aliceblue",
+    "subtitle": "Impact is determined by calculating global terorrism index score on a scale of 0 to 10. Iraq has had the most fatal impact at GTI score of 9.96.",
+    "fontWeight":600,
+    "fontSize": 15,
+    "subtitleColor": "aliceblue",
+    "subtitlePadding": 10,
+    "subtitleFontStyle": "italic",
+    "anchor": "middle"
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/nateruze/FIT3179/main/custom.geo-2.json",
     "format": {"type": "topojson", "feature": "custom"}
