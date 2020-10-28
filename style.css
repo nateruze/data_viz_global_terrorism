@@ -964,18 +964,19 @@ nav h3 {
 }
 
 #footer {
-    background: #111111;
+    background: #e85d04;
     
 }
 
-#footer h3 {
+#footer h5 {
         font-family: 'PT Sans', sans-serif;
   font-size: 10px;
   line-height: 0.5rem;
     letter-spacing: 0.2rem;
-  color:  #50504f;
+  color:  ##f0f8ff;
   
     text-align: center;
+    font-style: italic;
     
 }
 
