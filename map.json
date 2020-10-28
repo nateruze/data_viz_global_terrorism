@@ -1,14 +1,17 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "background": "#111111",
+ 
   "config": {
     "style": {"cell": {"stroke": "transparent"}},
     "legend": {"labelColor": "aliceblue", "titleColor":"#f5f3f4"},
     "axis": {"labelColor":"aliceblue"}
   },
+
   "width": 700,
   "height": 500,
   "projection": {"type": "equalEarth"},
+
   "title": {
     "text": "Impact of Terrorism Around the World",
     "color":"aliceblue",
@@ -20,11 +23,18 @@
     "subtitleFontStyle": "italic",
     "anchor": "middle"
   },
+
   "data": {
     "url": "https://raw.githubusercontent.com/nateruze/FIT3179/main/custom.geo-2.json",
     "format": {"type": "topojson", "feature": "custom"}
   },
-  "transform": [
+
+  "layer": [
+    {
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "transform": [
     {
       "lookup": "properties.admin",
       "from": {
@@ -36,8 +46,11 @@
         "fields": ["Score"]
       }
     }
-  ],
-  "mark": {"type": "geoshape"},
+  ]
+    ,
+
+    
+        "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
       "field": "Score",
@@ -53,4 +66,7 @@
       }
     ]
   }
+    }
+  ]
+ 
 }
