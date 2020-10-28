@@ -490,6 +490,7 @@ ul li ul li {
     padding: 20px;
     max-height: 600px;
     background-color: #111111;
+    paddint-top: 20px;
 }
 
 
@@ -535,14 +536,14 @@ ul li ul li {
 }
 
 #bag-brown h4 {
-    color: #cbcbc9;
+    color: #f0f8ff;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
 }
 
 #bag-brown p {
-    color: #b7b7b6;
+    color: #f0f8ff;
 }
 
 #blue-bag {
