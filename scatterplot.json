@@ -1,8 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "background": "#111111",
-  "width": 500,
-  "height": 300,
+  "width": 600,
+  "height": 450,
+  "title": {
+    "text": "Most Active Terrorist Groups in the Last Decade",
+    "color":"aliceblue",
+    "subtitle": "The graph shows the top 10 most active terrorist groups between 2010 to 2019",
+    "fontWeight":600,
+    "fontSize": 15,
+    "subtitleColor": "aliceblue",
+    "subtitlePadding": 10,
+    "subtitleFontStyle": "italic",
+    "anchor": "middle"
+  },
   "config": {
     "style": {"cell": {"stroke": "transparent"}},
     "legend": {"labelColor": "aliceblue", "titleColor": "aliceblue"},
@@ -55,23 +66,26 @@
     "y": {
       "field": "Wounded",
       "type": "quantitative",
-      "axis": {"tickCount": 7},
-      "scale": {"type": "log", "domain": [1, 100000]}
+      "axis": {"tickCount": 7, "titleColor": "aliceblue"},
+      "scale": {"type": "log", "domain": [1, 100000]},
+      "title": "Number of Wounds"
     },
     "x": {
       "field": "Deaths",
       "type": "quantitative",
       "scale": {"type": "log", "domain": [1, 100000]},
-      "axis": {"tickCount": 7}
+      "axis": {"tickCount": 7, "titleColor": "aliceblue"},
+      "title": "Number of Deaths"
     },
     "size": {
       "field": "Total Attacks",
       "type": "quantitative",
       "scale": {"rangeMax": 1500, "rangeMin": 1},
-      "legend": {"format": ".1s"}
+      "legend": null
     },
     "color": {
       "field": "Group",
+      "title": "Terrorist Group",
       "type": "nominal",
       "scale": {
         "domain": [
