@@ -6,7 +6,7 @@
   "title": {
     "text": "Most Active Terrorist Groups in the Last Decade",
     "color":"aliceblue",
-    "subtitle": "The graph shows the top 10 most active terrorist groups between 2010 to 2019",
+    "subtitle": "The graph shows the top 10 most active terrorist groups between 2010 to 2019. Radius of bubble represents total number of attacks by a terrorist group.",
     "fontWeight":600,
     "fontSize": 15,
     "subtitleColor": "aliceblue",
