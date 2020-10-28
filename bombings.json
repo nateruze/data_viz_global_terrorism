@@ -9,6 +9,17 @@
     "legend": {"labelColor": "aliceblue", "titleColor": "aliceblue"},
     "axis": {"grid": false, "labelColor": "aliceblue"}
   },
+  "title": {
+    "text": "Most Fatal Terrorist Attacks in History",
+    "color":"aliceblue",
+    "subtitle": "The graph shows the top 10 most active terrorist groups between 2010 to 2019. Radius of bubble represents total number of attacks by a terrorist group.",
+    "fontWeight":600,
+    "fontSize": 15,
+    "subtitleColor": "#111111",
+    "subtitlePadding": 10,
+    "subtitleFontStyle": "italic",
+    "anchor": "middle"
+  },
   "width": 600,
   "height": 500,
   "layer": [
@@ -32,10 +43,13 @@
     {
       "mark": {"type": "circle", "size": 300, "color": "#ffba08"},
       "encoding": {
-        "x": {"field": "Year", "type": "nominal", "scale": {"zero": false}},
+        "x": {"field": "Year", "type": "nominal", 
+        "axis": {"titleColor": "aliceblue"},
+        "scale": {"zero": false}},
         "y": {
           "field": "Deaths",
           "type": "quantitative",
+          "axis": {"titleColor": "aliceblue"},
           "scale": {"zero": false}
         },
         "order": {"field": "Year"},
@@ -53,7 +67,7 @@
         "baseline": "middle",
         "dx": -2,
         "dy": -250,
-        "fontSize": 8,
+        "fontSize": 11,
         "color": "aliceblue"
       },
       "encoding": {
@@ -74,7 +88,7 @@
         "baseline": "middle",
         "dx": 200,
         "dy": -100,
-        "fontSize": 8,
+        "fontSize": 11,
         "color": "aliceblue"
       },
       "encoding": {
@@ -95,7 +109,7 @@
         "baseline": "middle",
         "dx": 210,
         "dy": -9,
-        "fontSize": 8,
+        "fontSize": 11,
         "color": "aliceblue"
       },
       "encoding": {
