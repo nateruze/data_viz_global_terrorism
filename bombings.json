@@ -122,6 +122,29 @@
           "value": 0
         }
       }
+    },
+
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": 265,
+        "dy": 240,
+        "fontSize": 11,
+        "color": "aliceblue"
+      },
+      "encoding": {
+        "text": {"field": "Place", "type": "nominal"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Place'] == 'Christchurch shooting, NZ'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
     }
+    
   ]
 }
