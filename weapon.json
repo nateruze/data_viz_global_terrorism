@@ -11,28 +11,42 @@
   "height": 500,
   "data": {
     "values": [
-       {"Weapon": "Explosives", "value": 92426},
-      {"Weapon": "Firearms", "value": 58524},
-      {"Weapon": "Incendiary", "value": 11135},
-      {"Weapon": "Unknown", "value": 15157},
-      {"Weapon": "Other", "value": 4416}
+       {"Weapon": "Explosives (51%)", "value": 92426},
+      {"Weapon": "Firearms (32%)", "value": 58524},
+      {"Weapon": "Incendiary (6%)", "value": 11135},
+      {"Weapon": "Unknown (8%)", "value": 15157},
+      {"Weapon": "Other (2%)", "value": 4416}
     ]
   },
   "encoding": {
     "theta": {"field": "value", "type": "quantitative", "stack": true},
     "color": {"field": "Weapon", "type": "nominal", "legend": null,"scale": {
       
-      "range": ["#9d0208", "#faa307", "#d00000",  "#fff3b0", "#335c67"]
+      "range": ["#9d0208", "#ffba08", "#e85d04",  "#fff3b0", "#81b29a"]
       }
     }
   },
-  "layer": [{
-    "mark": {"type": "arc", "outerRadius": 180, "innerRadius": 60}
+  "layer": [
+
+    {
+    "mark": {"type": "arc", "outerRadius": 180, "innerRadius": 60},
+    "encoding": {
+       "tooltip": [
+      {"field": "Weapon", "type": "nominal", "title": "Weapon"},
+      {
+        "field": "value", 
+        "type": "quantitative",
+        "title": "Total Attacks using this weapon"
+      }
+    ]
+    }
   }, {
-    "mark": {"type": "text", "radius": 210},
+    "mark": {"type": "text", "radius": 230},
     "encoding": {
       "text": {"field": "Weapon", "type": "nominal"}
+     
     }
+    
   }],
   "view": {"stroke": null}
 }
