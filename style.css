@@ -75,13 +75,13 @@ body {
     flex: 50%;
     background: aqua;
 }
-
+/*
 @media screen and (max-width: 600px) {
     .column {
         width: 100%;
     }
 }
-
+*/
 header .dropdown {
     float: left;
     overflow: hidden;
