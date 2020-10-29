@@ -192,7 +192,7 @@ header {
 
 #watch h4 {
     color: #adb5bd;
-    text-align: right;
+    text-align: left;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
@@ -201,7 +201,7 @@ header {
 #watch h4:hover {
     background-color: #111111;
     color: #ced4da;
-    text-align: right;
+    text-align: left;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
@@ -209,14 +209,14 @@ header {
 
 #watch p {
     color: #adb5bd;
-    text-align: right;
+    text-align: left;
    
 }
 
 #watch p:hover {
     background-color: #111111;
     color: #ced4da;
-    text-align: right;
+    text-align: left;
    
 }
 
