@@ -253,9 +253,9 @@ ul li ul li {
 }
 
 
-#showcase a:hover {
-    background-color: #7D808A;
-    color: #E8E8E6;
+#showcase p:hover {
+    background-color: #111111;
+    color: #ced4da;
 }
 
 #tagline {
