@@ -150,7 +150,7 @@ header {
 
 /* object one */
 
-#still-heart {
+#object-one {
     background-color: #111111;
     padding: 20px;
     padding-right: 2px;
@@ -158,14 +158,14 @@ header {
     /*background: -webkit-linear-gradient(90deg, #4f5253, #c8c8cc 30%);*/
 }
 
-#still-heart h4 {
+#object-one h4 {
     color: #adb5bd;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
 }
 
-#still-heart h4:hover {
+#object-one h4:hover {
     background-color: #111111;
     color: #ced4da;
     font-family: 'Quicksand', sans-serif;
@@ -174,23 +174,23 @@ header {
 }
 
 
-#still-heart p {
+#object-one p {
     color: #adb5bd;
 }
 
-#still-heart p:hover {
+#object-one p:hover {
     background-color: #111111;
     color: #ced4da;
 }
 
-#watch {
+#object-two {
     padding-top: 5px;
     max-height: 530px;
     background-color: #111111;
     padding-bottom: 20px;
 }
 
-#watch h4 {
+#object-two h4 {
     color: #adb5bd;
     text-align: left;
     font-family: 'Quicksand', sans-serif;
@@ -198,7 +198,7 @@ header {
     text-transform: uppercase;
 }
 
-#watch h4:hover {
+#object-two h4:hover {
     background-color: #111111;
     color: #ced4da;
     text-align: left;
@@ -207,20 +207,20 @@ header {
     text-transform: uppercase;
 }
 
-#watch p {
+#object-two p {
     color: #adb5bd;
     text-align: left;
    
 }
 
-#watch p:hover {
+#object-two p:hover {
     background-color: #111111;
     color: #ced4da;
     text-align: left;
    
 }
 
-#bag-brown {
+#object-three {
     padding: 20px;
     max-height: 600px;
     background-color: #111111;
@@ -229,14 +229,14 @@ header {
 }
 
 
-#bag-brown h4 {
+#object-three h4 {
     color: #adb5bd;
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     text-transform: uppercase;
 }
 
-#bag-brown h4:hover {
+#object-three h4:hover {
     background-color: #111111;
     color: #ced4da;
     font-family: 'Quicksand', sans-serif;
@@ -244,11 +244,11 @@ header {
     text-transform: uppercase;
 }
 
-#bag-brown p {
+#object-three p {
     color: #adb5bd;
 }
 
-#bag-brown p:hover {
+#object-three p:hover {
     background-color: #111111;
     color: #ced4da;
    
